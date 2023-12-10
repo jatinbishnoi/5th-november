@@ -1,0 +1,122 @@
+       Assignment Of 5th November
+       
+1.)
+In JavaScript, the syntax for the ternary operator is the same as in many other languages:
+
+```javascript
+condition ? expression_if_true : expression_if_false;
+```
+
+Now, let's write a simple JavaScript program to check whether a number is even or odd using the ternary operator:
+
+```javascript
+// Function to check if a number is even or odd using the ternary operator
+function checkEvenOrOdd(number) {
+  // Use the ternary operator to check if the number is even or odd
+  var result = (number % 2 === 0) ? "even" : "odd";
+
+  // Output the result
+  console.log("The number is " + result + ".");
+}
+
+// Example usage
+var userInput = prompt("Enter a number:"); // You can use prompt for user input in a browser environment
+
+// Convert user input to a number (prompt returns a string)
+var userNumber = parseInt(userInput);
+
+// Check if the user entered a valid number
+if (!isNaN(userNumber)) {
+  // Call the function to check if the number is even or odd
+  checkEvenOrOdd(userNumber);
+} else {
+  console.log("Invalid input. Please enter a valid number.");
+}
+```
+
+In this example, the condition `(number % 2 === 0)` checks whether the number is divisible by 2, and the result is assigned to the variable `result` using the ternary operator. The program then logs whether the number is even or odd to the console. Note that `prompt` is used to get user input in a browser environment. If you are running this code in a different environment, you might need to use a different method for obtaining user input.
+
+
+2.)
+In JavaScript, the comma operator is used to combine multiple expressions into a single expression. It evaluates each of its operands from left to right and returns the value of the last operand. While it's not used as frequently as other operators, it can be handy in situations where multiple expressions need to be executed, and only the result of the last one is relevant.
+
+Here's the basic syntax:
+
+```javascript
+expression1, expression2, expression3, ..., expressionN
+```
+
+And here's a simple example demonstrating the usage of the comma operator:
+
+```javascript
+// Using the comma operator to combine expressions
+var a = 1, b = 2, c = 3;
+
+// The comma operator is used in the initialization of the variable 'a'
+// The value of 'a' will be the result of the last expression, which is 'c'
+console.log(a = (b += 1, c += 2));
+
+// Output: 5
+console.log("a:", a); // The value of 'a' is now 5
+console.log("b:", b); // The value of 'b' is now 3
+console.log("c:", c); // The value of 'c' is now 5
+```
+
+In this example:
+
+1. The expressions `b += 1` and `c += 2` are combined using the comma operator in the initialization of the variable `a`.
+2. The value of `a` becomes the result of the last expression, which is `c += 2`.
+3. The values of `a`, `b`, and `c` are then logged to the console to show the result of each expression.
+
+While the example is simple, the comma operator is often used in more complex scenarios, such as in `for` loop headers or when combining expressions within function arguments.
+
+
+3.)
+You can use a nested ternary operator to check whether a number is positive, negative, or zero and then print the corresponding message. Here's an example in JavaScript:
+
+```javascript
+// Function to check if a number is positive, negative, or zero using nested ternary operators
+function checkNumber(value) {
+  var result = (value > 0) ? "positive" : (value < 0) ? "negative" : "zero";
+  console.log("The number is " + result + ".");
+}
+
+// Examples
+checkNumber(5);     // Output: The number is positive.
+checkNumber(-3);    // Output: The number is negative.
+checkNumber(0);     // Output: The number is zero.
+```
+
+In this example:
+
+1. The outermost ternary operator checks if the `value` is greater than 0. If true, it sets the result to "positive."
+2. If the outermost condition is false, the inner ternary operator checks if the `value` is less than 0. If true, it sets the result to "negative."
+3. If both conditions are false, it means the `value` is 0, and the result is set to "zero."
+
+The final result is then printed to the console. This is a concise way of expressing conditional logic, but keep in mind that readability should be a priority, and overly nested ternary operators can make code harder to understand.
+
+
+4.)
+Certainly! Here's an example of using a ternary operator to check if a person is eligible to vote based on their age in JavaScript:
+
+```javascript
+// Function to check if a person is eligible to vote using a ternary operator
+function checkVotingEligibility(age) {
+  var result = (age < 18) ? "You cannot vote" : "You can vote";
+  console.log(result);
+}
+
+// Examples
+checkVotingEligibility(20);  // Output: You can vote
+checkVotingEligibility(15);  // Output: You cannot vote
+```
+
+In this example:
+
+- The ternary operator checks if the `age` is less than 18.
+- If the condition is true (age is less than 18), the result is set to "You cannot vote."
+- If the condition is false (age is 18 or older), the result is set to "You can vote."
+- The final result is then logged to the console.
+
+This is a concise way to express a simple conditional check for voting eligibility based on age.
+
